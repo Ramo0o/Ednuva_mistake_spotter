@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "ednuva ",
+    "version": "1.0.0",
+    "icons":{
+        "16":"icons/book_warning.png",
+        "32":"icons/book_warning.png",
+        "128":"icons/book_warning.png"
+    },
+    "permissions":[
+        "storage"
+    ],
+    "content_scripts":[{
+        "matches":[
+            "https://ednuva.com/quiz/*/result"],
+        "run_at":"document_idle",
+        "js":["content.js"]
+    },
+    {
+        "matches":[
+            "https://ednuva.com/quiz/*/answers*"],
+        "run_at":"document_idle",
+        "js":["content2.js"]
+    }
+]
+}
